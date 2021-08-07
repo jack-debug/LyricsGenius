@@ -575,6 +575,7 @@ class Genius(API, PublicAPI):
                 if result is not None and self.verbose:
                     print('Song {n}: "{t}"'.format(n=artist.num_songs,
                                                    t=safe_unicode(song.title)))
+                    time.sleep(10)
 
                 # Exit search if the max number of songs has been met
                 reached_max_songs = max_songs and artist.num_songs >= max_songs
